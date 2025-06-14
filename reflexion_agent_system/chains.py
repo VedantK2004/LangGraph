@@ -18,7 +18,7 @@ api = os.getenv("OPENROUTER_API_KEY")
 llm = ChatOpenAI(
     api_key=SecretStr(api) if api is not None else None,
     base_url="https://openrouter.ai/api/v1",
-    model="meta-llama/llama-3.3-70b-instruct:free",
+    model="meta-llama/llama-3.3-8b-instruct:free",
 )
 
 # Actor Agent Prompt

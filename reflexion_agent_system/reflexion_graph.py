@@ -40,14 +40,11 @@ print(app.get_graph().draw_mermaid())
 print(app.get_graph().draw_ascii())
 
 response = app.invoke(
-    [
-        {
-            "role": "user",
-            "content": "Write about how small business can leverage AI to grow",
-        }
-    ]
+    {
+        "role": "user",
+        "content": "What is the capital of France? Please provide a detailed answer with references.",
+    }
 )
-
 
 print(response["tool_calls"][0]["args"]["answer"])
 print(response, "response")
