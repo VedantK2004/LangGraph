@@ -9,9 +9,8 @@ from langchain_core.runnables.config import RunnableConfig
 
 load_dotenv()
 
-sqlite_conn = sqlite3.connect("checkpoint.sqlite", check_same_thread=False)
-
-memory = SqliteSaver(sqlite_conn)
+conn = sqlite3.connect("checkpoint.sqlite", check_same_thread=False)
+memory = SqliteSaver(conn)
 
 llm = ChatGroq(model="llama-3.1-8b-instant")
 
